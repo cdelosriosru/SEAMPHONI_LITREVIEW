@@ -91,7 +91,7 @@ PER_PAGE = 200
 
 # Politeness: OpenAlex asks for an email in the "mailto" param for faster,
 # more reliable service (the "polite pool"). Put your email here.
-MAILTO = "cdelosriosru@gmail.com"
+MAILTO = "mail@mail.com"
 
 # Be nice to the API between page requests (seconds).
 # Bumped up from 0.1 -> 1.0 to avoid tripping the rate limiter.
@@ -109,7 +109,7 @@ OUTPUT_DIR = "LiteratureReview_SEAMPHONI/Openalex/API"  # change if you want out
 # --------------------------------------------------------------------------
 # Helpers
 # --------------------------------------------------------------------------
-bZKU5x659DJSNeaRhfEEAI
+
 def reconstruct_abstract(inverted_index):
     """OpenAlex stores abstracts as an inverted index: {word: [positions]}.
     Rebuild the plain-text abstract from it."""
