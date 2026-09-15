@@ -10,6 +10,8 @@ import requests
 from itertools import combinations
 from dotenv import load_dotenv
 import os
+from datetime import date
+from publish import publish_update, auto_push
 
 load_dotenv()
 
@@ -20,7 +22,7 @@ API_KEY = os.getenv("API_KEY_OPENALEX")
 MAILTO = os.getenv("MAILTO_OPENALEX")
 SLEEP_BETWEEN_QUERIES = 0.5
 BASE_URL = "https://api.openalex.org/works"
-OUTPUT_CSV = "LiteratureReview_SEAMPHONI/Openalex/API/Query_counts.csv"
+OUTPUT_CSV = "results/query_counts.csv"
 
 
 # --------------------------------------------------------------------------
@@ -288,6 +290,15 @@ def main():
 
     print(f"\nTotal across all queries: {total}")
     print(f"Counts written to {OUTPUT_CSV}")
+    publish_update(
+        docs_dir="../docs",
+        date=date.today().isoformat(),
+        slug="daily-search",
+        title="OpenAlex search update",
+        fieldnames=fieldnames,
+        rows=rows,
+    )
+    auto_push(repo_dir="..")
 
 
 if __name__ == "__main__":
