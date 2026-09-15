@@ -47,7 +47,9 @@ date: {date}
 ## Results
 
 {TABLE_START}
+
 {table_md}
+
 {TABLE_END}
 
 ## Comments
@@ -58,7 +60,7 @@ date: {date}
 
 def upsert_update_page(path, title, date, table_md):
     """Create the page if missing; otherwise replace only the table region."""
-    table_block = f"{TABLE_START}\n{table_md}\n{TABLE_END}"
+    table_block = f"{TABLE_START}\n\n{table_md}\n\n{TABLE_END}"
 
     if not os.path.exists(path):
         os.makedirs(os.path.dirname(path), exist_ok=True)
