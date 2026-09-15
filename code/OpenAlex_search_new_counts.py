@@ -299,7 +299,7 @@ def main():
     publish_update(
         docs_dir="../docs",
         date=date.today().isoformat(),
-        slug="daily-search",
+        slug=f"search-{datetime.now().strftime('%H%M')}",
         title="OpenAlex search update",
         fieldnames=fieldnames,
         rows=rows,
