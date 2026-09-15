@@ -12,17 +12,23 @@ from dotenv import load_dotenv
 import os
 from datetime import date
 from site_publish import publish_update, auto_push
+from pathlib import Path
 
 load_dotenv()
 
 # --------------------------------------------------------------------------
 # PATHS, CREDENTIALS, AND BASIC SETTINGS
 # --------------------------------------------------------------------------
+
+
+SCRIPT_DIR = Path(__file__).resolve().parent      # .../SEAMPHONI_LITREVIEW/code
+REPO_ROOT = SCRIPT_DIR.parent                       # .../SEAMPHONI_LITREVIEW
+
 API_KEY = os.getenv("API_KEY_OPENALEX")
 MAILTO = os.getenv("MAILTO_OPENALEX")
 SLEEP_BETWEEN_QUERIES = 0.5
 BASE_URL = "https://api.openalex.org/works"
-OUTPUT_CSV = "results/query_counts.csv"
+OUTPUT_CSV = REPO_ROOT / "results" / "query_counts.csv"
 
 
 # --------------------------------------------------------------------------
