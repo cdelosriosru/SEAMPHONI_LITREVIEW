@@ -11,7 +11,7 @@ from itertools import combinations
 from dotenv import load_dotenv
 import os
 from datetime import date
-from publish import publish_update, auto_push
+from site_publish import publish_update, auto_push
 
 load_dotenv()
 
