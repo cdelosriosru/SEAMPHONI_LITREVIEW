@@ -10,6 +10,7 @@ date: 2026-09-15
 ## Results
 
 <!-- TABLE:START -->
+
 | Query_label | Count | DOI_1 |
 |---|---|---|
 | Ocean_context_valuation_only | 830 | 0 |
@@ -24,6 +25,7 @@ date: 2026-09-15
 | Ocean_resources_valuation_management | 818 | 1 |
 | Ocean_resources_core_only | 7661 | 0 |
 | Ocean_resources_core_management | 3690 | 0 |
+
 <!-- TABLE:END -->
 
 ## Comments
