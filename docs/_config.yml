@@ -1,0 +1,6 @@
+title: SEAMPHONI Literature Review
+description: Ecosystem services valuation search progress
+theme: jekyll-theme-cayman
+markdown: kramdown
+kramdown:
+  input: GFM
