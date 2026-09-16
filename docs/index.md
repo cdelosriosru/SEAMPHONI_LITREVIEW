@@ -17,6 +17,7 @@ group) — see `code/OpenAlex_search_new_counts.py` for the exact query
 logic.
 
 <!-- TERMS:START -->
+
 | Term group | Terms |
 |---|---|
 | **ES_core** | ecosystem services, environmental services, nature services, natural capital |
@@ -25,10 +26,12 @@ logic.
 | **Ocean_acronyms** | ABNJ, MPA, MSP, OMA |
 | **Ocean_resources** | fisheries, coral, fish, fishery |
 | **Management** | marine spatial planning, marine protected area, conservation planning, participatory mapping, co-management, management |
+
 <!-- TERMS:END -->
 
 ## Updates
 
 - [2026-09-15 — OpenAlex search update](updates/2026-09-15-daily-search.md)
 
+- [2026-09-16 — OpenAlex search update](updates/2026-09-16-search-1151.md)
 <!-- Add a new bullet above this line each time you publish a new update -->
