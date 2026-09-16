@@ -23,7 +23,7 @@ logic.
 | **ES_core** | ecosystem services, environmental services, nature services, natural capital |
 | **ES_valuation** | choice experiment, contingent valuation, willingness to pay, stated preference, stated preferences, revealed preference, revealed preferences, stakeholder perception, stakeholder perceptions, stakeholders perception, stakeholders perceptions, WTP, WTA, valuation experiment, valuation experiments, PGIS |
 | **Ocean_context** | offshore, deep sea, high seas, marine environment, marine ecosystem, coastal environment, coastal ecosystem, ocean environment, ocean ecosystem, oceanic environment, oceanic ecosystem, submarine environment, submarine ecosystem |
-| **Ocean_acronyms** | ABNJ, MPA, MSP, OMA |
+| **Ocean_acronyms** | ABNJ, MPA, MSP, OMA, OMAS |
 | **Ocean_resources** | fisheries, coral, fish, fishery |
 | **Management** | marine spatial planning, marine protected area, conservation planning, participatory mapping, co-management, management |
 
@@ -33,4 +33,5 @@ logic.
 
 - [2026-09-15 — OpenAlex search update](updates/2026-09-15-daily-search.md)
 - [2026-09-16 — OpenAlex search update](updates/2026-09-16-search-1204.md)
+- [2026-09-16 — OpenAlex search update](updates/2026-09-16-search-1209.md)
 <!-- Add a new bullet above this line each time you publish a new update -->
