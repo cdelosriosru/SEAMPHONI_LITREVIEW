@@ -3,107 +3,42 @@
 # of papers found by query string and whether or not specific DOIs are present
 # in the search.
 
+# Objective: This script searches Open Alex and returns the count
+# of papers found by query string and whether or not specific DOIs are present
+# in the search.
 
 import csv
-import time
-import requests
-from itertools import combinations
-from dotenv import load_dotenv
 import os
-from datetime import date
-from site_publish import publish_update, auto_push
+import sys
+import time
+from datetime import date, datetime
+from itertools import combinations
 from pathlib import Path
+
+import requests
+from dotenv import load_dotenv
+
+# --------------------------------------------------------------------------
+# PATHS
+# --------------------------------------------------------------------------
+SCRIPT_DIR = Path(__file__).resolve().parent   # .../SEAMPHONI_LITREVIEW/code
+REPO_ROOT = SCRIPT_DIR.parent                  # .../SEAMPHONI_LITREVIEW
+sys.path.insert(0, str(REPO_ROOT))             # makes inputs/ importable — must run before the imports below
+
+from site_publish import publish_update, auto_push, update_search_terms_section
+from inputs.search_terms import TERM_GROUPS
+from inputs.target_papers import TARGET_DOIS
 
 load_dotenv()
 
 # --------------------------------------------------------------------------
-# PATHS, CREDENTIALS, AND BASIC SETTINGS
+# CREDENTIALS AND BASIC SETTINGS
 # --------------------------------------------------------------------------
-
-
-SCRIPT_DIR = Path(__file__).resolve().parent      # .../SEAMPHONI_LITREVIEW/code
-REPO_ROOT = SCRIPT_DIR.parent                       # .../SEAMPHONI_LITREVIEW
-
 API_KEY = os.getenv("API_KEY_OPENALEX")
 MAILTO = os.getenv("MAILTO_OPENALEX")
 SLEEP_BETWEEN_QUERIES = 0.5
 BASE_URL = "https://api.openalex.org/works"
 OUTPUT_CSV = REPO_ROOT / "results" / "query_counts.csv"
-
-
-# --------------------------------------------------------------------------
-# DOIS OF KEY PAPERS
-# --------------------------------------------------------------------------
-
-TARGET_DOIS = [
-    "10.1080/00036840600852955",   # stated preferences fish in Wadden Sea (pdf not available)
-]
-
-# --------------------------------------------------------------------------
-# SEARCH TERMS
-# --------------------------------------------------------------------------
-
-TERM_GROUPS = {
-    "ES_core": [
-        '"ecosystem services"',
-        '"environmental services"',
-        '"nature services"',
-        '"natural capital"'
-    ],
-    "ES_valuation": [
-        '"choice experiment"',
-        '"contingent valuation"',
-        '"willingness to pay"',
-        '"stated preference"',
-        '"stated preferences"',
-        '"revealed preference"',
-        '"revealed preferences"',
-        '"stakeholder perception"',
-        '"stakeholder perceptions"',
-        '"stakeholders perception"',
-        '"stakeholders perceptions"',
-        'WTP',
-        'WTA',
-        '"valuation experiment"',
-        '"valuation experiments"',
-        'PGIS'
-    ],
-    "Ocean_context": [
-        'offshore',
-        '"deep sea"',
-        '"high seas"',
-        '"marine environment"',
-        '"marine ecosystem"',
-        '"coastal environment"',
-        '"coastal ecosystem"',
-        '"ocean environment"',
-        '"ocean ecosystem"',
-        '"oceanic environment"',
-        '"oceanic ecosystem"',
-        '"submarine environment"',
-        '"submarine ecosystem"'
-    ],
-    "Ocean_acronyms": [
-        'ABNJ',
-        'MPA',
-        'MSP',
-        'OMA'
-    ],
-    "Ocean_resources": [
-        'fisheries',
-        'coral',
-        'fish',
-        'fishery'
-    ],
-    "Management": [
-        '"marine spatial planning"',
-        '"marine protected area"',
-        '"conservation planning"',
-        '"participatory mapping"',
-        '"co-management"',
-        'management'
-    ],
-}
 
 # --------------------------------------------------------------------------
 # BUILDING QUERIES
@@ -297,14 +232,18 @@ def main():
     print(f"\nTotal across all queries: {total}")
     print(f"Counts written to {OUTPUT_CSV}")
     publish_update(
-        docs_dir="../docs",
+        docs_dir=str(REPO_ROOT / "docs"),
         date=date.today().isoformat(),
         slug=f"search-{datetime.now().strftime('%H%M')}",
         title="OpenAlex search update",
         fieldnames=fieldnames,
         rows=rows,
     )
-    auto_push(repo_dir="..")
+    update_search_terms_section(
+        index_path=str(REPO_ROOT / "docs" / "index.md"),
+        term_groups=TERM_GROUPS,
+    )
+    auto_push(repo_dir=str(REPO_ROOT))
 
 
 if __name__ == "__main__":

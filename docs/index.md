@@ -16,6 +16,7 @@ services group AND an ocean-context group, optionally AND a management
 group) — see `code/OpenAlex_search_new_counts.py` for the exact query
 logic.
 
+<!-- TERMS:START -->
 | Term group | Terms |
 |---|---|
 | **ES_core** | ecosystem services, environmental services, nature services, natural capital |
@@ -24,7 +25,7 @@ logic.
 | **Ocean_acronyms** | ABNJ, MPA, MSP, OMA |
 | **Ocean_resources** | fisheries, coral, fish, fishery |
 | **Management** | marine spatial planning, marine protected area, conservation planning, participatory mapping, co-management, management |
-
+<!-- TERMS:END -->
 
 ## Updates
 
