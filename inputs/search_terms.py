@@ -51,7 +51,8 @@ TERM_GROUPS = {
         'ABNJ',
         'MPA',
         'MSP',
-        'OMA'
+        'OMA',
+        'OMAS'
     ],
     "Ocean_resources": [
         'fisheries',
