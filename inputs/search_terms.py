@@ -68,5 +68,10 @@ TERM_GROUPS = {
         '"co-management"',
         'management'
     ],
+    "Ecosystem_data_methods": [
+        'eDNA',
+        'isotope',
+        'isotopes'
+    ]
 }
 

@@ -99,6 +99,8 @@ def build_query_set(ocean_group_names, term_groups=TERM_GROUPS):
             ("valuation_management",  ["ES_valuation", ocean_name, "Management"]),
             ("core_only",             ["ES_core", ocean_name]),
             ("core_management",       ["ES_core", ocean_name, "Management"]),
+            ("methods_es_ocean",      ["ES_core", ocean_name, "Ecosystem_data_methods"]),
+
         ]
         for label, groups in template_specs:
             queries.append({

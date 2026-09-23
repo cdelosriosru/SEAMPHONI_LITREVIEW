@@ -26,6 +26,7 @@ logic.
 | **Ocean_acronyms** | ABNJ, MPA, MSP, OMA, OMAS |
 | **Ocean_resources** | fisheries, coral, fish, fishery |
 | **Management** | marine spatial planning, marine protected area, conservation planning, participatory mapping, co-management, management |
+| **Ecosystem_data_methods** | eDNA, isotope, isotopes |
 
 <!-- TERMS:END -->
 
@@ -35,4 +36,5 @@ logic.
 - [2026-09-16 — OpenAlex search update](updates/2026-09-16-search-1204.md)
 - [2026-09-16 — OpenAlex search update](updates/2026-09-16-search-1209.md)
 - [2026-09-21 — Web of Science search update](updates/2026-09-21-wos-search-1230.md)
+- [2026-09-23 — OpenAlex search update](updates/2026-09-23-search-0907.md)
 <!-- Add a new bullet above this line each time you publish a new update -->
