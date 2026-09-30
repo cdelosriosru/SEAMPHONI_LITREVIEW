@@ -82,14 +82,14 @@ TERM_GROUPS = {
     "EF_valuation":[
         '"species distribution"',
         '"organic loading"',
-        '"carbon export'",
+        '"carbon export"',
         '"carbon sequestration"',
         'carbon',
         '"nutrient cycling"',
         'migration',
         '"function groups"',
         '"migration patterns"',
-        '"reproductive patterns'",
+        '"reproductive patterns"',
         'oxygen',
         'trophic',
         'sedimentation'

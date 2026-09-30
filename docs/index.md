@@ -26,7 +26,11 @@ logic.
 | **Ocean_acronyms** | ABNJ, MPA, MSP, OMA, OMAS |
 | **Ocean_resources** | fisheries, coral, fish, fishery |
 | **Management** | marine spatial planning, marine protected area, conservation planning, participatory mapping, co-management, management |
-| **Ecosystem_data_methods** | eDNA, isotope, isotopes |
+| **EF_core** | biodiversity, nutrient cycling, primary production, Ecosystem function, Ecosystems functioning, energy flow, regulation, biological process, physiochemical process |
+| **EF_valuation** | species distribution, organic loading, carbon export, carbon sequestration, carbon, nutrient cycling, migration, function groups, migration patterns, reproductive patterns, oxygen, trophic, sedimentationreproduction, turbidity, decomposition |
+| **ESt_core** | producers, consumers, ecosystem structure, ecosystem structures, light, sunlight, depth, pressure, temperature, salinity, nutrients, oxygen, vertical zones |
+| **ESt_valuation** | kelp, seaweed, seaweeds, macroalgae, plankton, pelagic, euphotic, dysophotic, apotic, mesophotic, photosynthesis, coral reef, coral, corals, temperate reefs, temperate reef, seagrass, seagrass meadows, rocky reefs, estuaries, larval recruitment, connectivity, habitats, benthic, coralline algae, CCA |
+| **Ecosystem_data_methods** | eDNA, long-term monitoring, isotope, isotopes, remote sensing, acoustics, metabarcoding, sedimentology, image, drone, restoration |
 
 <!-- TERMS:END -->
 
@@ -38,4 +42,5 @@ logic.
 - [2026-09-21 — Web of Science search update](updates/2026-09-21-wos-search-1230.md)
 - [2026-09-23 — OpenAlex search update](updates/2026-09-23-search-0907.md)
 - [2026-09-29 — OpenAlex search update](updates/2026-09-29-search-2236.md)
+- [2026-09-30 — OpenAlex search update](updates/2026-09-30-search-1001.md)
 <!-- Add a new bullet above this line each time you publish a new update -->
