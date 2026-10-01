@@ -100,6 +100,14 @@ def build_query_set(ocean_group_names, term_groups=TERM_GROUPS):
             ("core_only",             ["ES_core", ocean_name]),
             ("core_management",       ["ES_core", ocean_name, "Management"]),
             ("methods_es_ocean",      ["ES_core", ocean_name, "Ecosystem_data_methods"]),
+            ("ef_valuation_only",       ["EF_valuation", ocean_name]),
+            ("ef_valuation_management", ["EF_valuation", ocean_name, "Management"]),
+            ("ef_core_only",            ["EF_core", ocean_name]),
+            ("ef_core_management",      ["EF_core", ocean_name, "Management"]),
+            ("est_valuation_only",       ["ESt_valuation", ocean_name]),
+            ("est_valuation_management", ["ESt_valuation", ocean_name, "Management"]),
+            ("est_core_only",            ["ESt_core", ocean_name]),
+            ("est_core_management",      ["ESt_core", ocean_name, "Management"]),
 
         ]
         for label, groups in template_specs:

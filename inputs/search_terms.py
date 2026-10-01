@@ -92,7 +92,7 @@ TERM_GROUPS = {
         '"reproductive patterns"',
         'oxygen',
         'trophic',
-        'sedimentation'
+        'sedimentation',
         'reproduction',
         'turbidity',
         'decomposition'
