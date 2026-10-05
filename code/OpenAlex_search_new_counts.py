@@ -80,7 +80,7 @@ def build_all_combinations(group_names_pool, min_groups=2, max_groups=None,
     return queries
 
 
-OCEAN_GROUP_NAMES = ["Ocean_context", "Ocean_acronyms", "Ocean_resources"]
+OCEAN_GROUP_NAMES = ["Ocean_generic", "Ocean_habitats", "Ocean_acronyms",  "Ocean_resources"]
 
 def build_query_set(ocean_group_names, term_groups=TERM_GROUPS):
     """
@@ -95,24 +95,32 @@ def build_query_set(ocean_group_names, term_groups=TERM_GROUPS):
     queries = []
     for ocean_name in ocean_group_names:
         template_specs = [
-            ("valuation_only",        ["ES_valuation", ocean_name]),
-            ("valuation_management",  ["ES_valuation", ocean_name, "Management"]),
-            ("core_only",             ["ES_core", ocean_name]),
-            ("core_management",       ["ES_core", ocean_name, "Management"]),
-            ("methods_es_ocean",      ["ES_core", ocean_name, "Ecosystem_data_methods"]),
-            ("ef_valuation_only",       ["EF_valuation", ocean_name]),
-            ("ef_valuation_management", ["EF_valuation", ocean_name, "Management"]),
-            ("ef_core_only",            ["EF_core", ocean_name]),
-            ("ef_core_management",      ["EF_core", ocean_name, "Management"]),
-            ("est_valuation_only",       ["ESt_valuation", ocean_name]),
-            ("est_valuation_management", ["ESt_valuation", ocean_name, "Management"]),
-            ("est_core_only",            ["ESt_core", ocean_name]),
-            ("est_core_management",      ["ESt_core", ocean_name, "Management"]),
+            ("ES_core", ["ES_core", ocean_name]),
+            ("es_mapping", ["ES_core", "Mapping_participatory",  ocean_name]),
+            ("es_perception", ["ES_core", "Perception_social", ocean_name]),
+            ("es_valuation", ["ES_core", "Valuation_monetary", ocean_name]),
+            ("mapping", ["Mapping_participatory", ocean_name]),
+            ("perception", ["Perception_social", ocean_name]),
+            ("valuation", ["Valuation_monetary", ocean_name]),
+            ("es_mapping_mang", ["ES_core", "Mapping_participatory", ocean_name, "Management"]),
+            ("es_perception_mang", ["ES_core", "Perception_social", ocean_name, "Management"]),
+            ("es_valuation_mang", ["ES_core", "Valuation_monetary", ocean_name, "Management"]),
+            ("mapping_mang", ["Mapping_participatory", ocean_name, "Management"]),
+            ("perception_mang", ["Perception_social", ocean_name, "Management"]),
+            ("valuation_mang", ["Valuation_monetary", ocean_name, "Management"]),
+ #           ("ef_valuation_only",       ["EF_valuation", ocean_name]),
+ #           ("ef_valuation_management", ["EF_valuation", ocean_name, "Management"]),
+ #           ("ef_core_only",            ["EF_core", ocean_name]),
+ #           ("ef_core_management",      ["EF_core", ocean_name, "Management"]),
+ #           ("est_valuation_only",       ["ESt_valuation", ocean_name]),
+ #           ("est_valuation_management", ["ESt_valuation", ocean_name, "Management"]),
+ #           ("est_core_only",            ["ESt_core", ocean_name]),
+ #           ("est_core_management",      ["ESt_core", ocean_name, "Management"]),
 
         ]
         for label, groups in template_specs:
             queries.append({
-                "label": f"{ocean_name}_{label}",
+                "label": f"{label}_{ocean_name}",
                 "groups": tuple(groups),
                 "query": build_query(groups, term_groups)
             })
