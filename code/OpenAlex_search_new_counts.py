@@ -174,7 +174,7 @@ def get_count_for_filter(filter_str, mailto=MAILTO, api_key=API_KEY,
 
 def get_count(query, mailto=MAILTO, api_key=API_KEY, debug=False, max_retries=5):
     """Wrapper: count of works matching the search query alone."""
-    filter_str = f"title_and_abstract.search:{query}"
+    filter_str = f"title_abstract_keywords.search:{query}"
     return get_count_for_filter(filter_str, mailto, api_key, debug, max_retries)
 
 def check_target_dois(query, dois=TARGET_DOIS):
@@ -186,7 +186,7 @@ def check_target_dois(query, dois=TARGET_DOIS):
     found_list = []
     for doi in dois:
         clean_doi = doi.replace("https://doi.org/", "").strip()
-        filter_str = f"title_and_abstract.search:{query},doi:{clean_doi}"
+        filter_str = f"title_abstract_keywords.search:{query},doi:{clean_doi}"
         try:
             count = get_count_for_filter(filter_str)
         except requests.RequestException as e:

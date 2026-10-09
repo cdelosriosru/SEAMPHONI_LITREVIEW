@@ -49,4 +49,5 @@ logic.
 - [2026-09-29 — OpenAlex search update](updates/2026-09-29-search-2236.md)
 - [2026-09-30 — OpenAlex search update](updates/2026-09-30-search-1001.md)
 - [2026-10-05 — OpenAlex search update](updates/2026-10-05-search-1230.md)
+- [2026-10-09 — OpenAlex search update](updates/2026-10-09-search-1150.md)
 <!-- Add a new bullet above this line each time you publish a new update -->
