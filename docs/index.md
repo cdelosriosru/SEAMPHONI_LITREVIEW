@@ -33,11 +33,6 @@ logic.
 | **Ocean_acronyms** | ABNJ, BBNJ, MPA, MSP, OECM |
 | **Ocean_resources** | fisheries, fishery, fish stock, small-scale fisheries, small-scale fishery |
 | **Management** | marine spatial planning, conservation planning, co-management, area-based management, ecosystem-based management |
-| **EF_core** | biodiversity, nutrient cycling, primary production, Ecosystem function, Ecosystems functioning, energy flow, regulation, biological process, physiochemical process |
-| **EF_valuation** | species distribution, organic loading, carbon export, carbon sequestration, carbon, nutrient cycling, migration, function groups, migration patterns, reproductive patterns, oxygen, trophic, sedimentation, reproduction, turbidity, decomposition |
-| **ESt_core** | producers, consumers, ecosystem structure, ecosystem structures, light, sunlight, depth, pressure, temperature, salinity, nutrients, oxygen, vertical zones |
-| **ESt_valuation** | kelp, seaweed, seaweeds, macroalgae, plankton, pelagic, euphotic, dysophotic, apotic, mesophotic, photosynthesis, coral reef, coral, corals, temperate reefs, temperate reef, seagrass, seagrass meadows, rocky reefs, estuaries, larval recruitment, connectivity, habitats, benthic, coralline algae, CCA |
-| **Ecosystem_data_methods** | eDNA, long-term monitoring, isotope, isotopes, remote sensing, acoustics, metabarcoding, sedimentology, image, drone, restoration |
 
 <!-- TERMS:END -->
 
@@ -52,4 +47,5 @@ logic.
 - [2026-09-30 — OpenAlex search update](updates/2026-09-30-search-1001.md)
 - [2026-10-05 — OpenAlex search update](updates/2026-10-05-search-1230.md)
 - [2026-10-09 — OpenAlex search update](updates/2026-10-09-search-1150.md)
+- [2026-10-16 — OpenAlex search update](updates/2026-10-16-search-1534.md)
 <!-- Add a new bullet above this line each time you publish a new update -->
