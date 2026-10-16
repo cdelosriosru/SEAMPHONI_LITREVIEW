@@ -38,7 +38,7 @@ MAILTO = os.getenv("MAILTO_OPENALEX")
 BASE_URL = "https://api.openalex.org/works"
 PER_PAGE = 200
 SLEEP_BETWEEN_REQUESTS = 0.3
-OUTPUT_CSV = REPO_ROOT / "results" / "papers_metadata.csv"
+OUTPUT_CSV = REPO_ROOT / "results" / "papers_metadata_newkw.csv"
 
 SELECT_FIELDS = [
     "id", "doi", "title", "language", "publication_year", "type",

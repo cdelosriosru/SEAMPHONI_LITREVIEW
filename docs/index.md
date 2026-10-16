@@ -16,6 +16,8 @@ services group AND an ocean-context group, optionally AND a management
 group) — see `code/OpenAlex_search_new_counts.py` for the exact query
 logic.
 
+ - [Search strategy](search_strategy.md).
+
 <!-- TERMS:START -->
 
 | Term group | Terms |

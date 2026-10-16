@@ -14,7 +14,7 @@ import pandas as pd
 # --------------------------------------------------------------------------
 SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SCRIPT_DIR.parent
-INPUT_CSV = REPO_ROOT / "results" / "papers_metadata.csv"
+INPUT_CSV = REPO_ROOT / "results" / "papers_metadata_newkw.csv"
 OUTPUT_PNG = REPO_ROOT / "results" / "papers_per_query_template.png"
 OUTPUT_COUNTS = REPO_ROOT / "results" / "papers_per_query_template.csv"
 

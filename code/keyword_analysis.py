@@ -19,7 +19,7 @@ sys.path.insert(0, str(REPO_ROOT))
 
 
 
-CSV_PATH = REPO_ROOT / "results" / "papers_metadata.csv"  # <- your file
+CSV_PATH = REPO_ROOT / "results" / "papers_metadata_newkw.csv"  # <- your file
 KEYWORD_COL = "Keywords"                  # <- column name (e.g. "keywords.display_name")
 OUTPUT_PNG = REPO_ROOT / "results" / "keywords_wordcloud.png"
 EXCLUDE = set()                           # e.g. {"Computer science", "Biology"} to drop generic terms
